@@ -1,0 +1,241 @@
+/* Variables para tema y colores */
+:root {
+  --primary-color: #0d6efd;
+  --primary-hover: #0b5ed7;
+  --primary-shadow: rgba(13,110,253,0.4);
+  --background-color: #f8f9fa;
+  --text-color: #212529;
+  --text-muted: #6c757d;
+  --border-color: #dee2e6;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --transition-fast: 0.25s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset base */
+body {
+  font-family: var(--font-body);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-smooth), color var(--transition-smooth);
+}
+
+/* HEADINGS estilizados */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-top: 0;
+  letter-spacing: 0.04em;
+  transition: color var(--transition-fast);
+}
+
+h1.display-4 {
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px rgba(13,110,253,0.3);
+}
+
+/* Párrafos y textos */
+p.lead {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #495057;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  transition: color var(--transition-fast);
+}
+
+/* Contenedores */
+.container.py-5 {
+  max-width: 1140px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0 auto;
+}
+
+/* Sección con borde animado */
+section.mb-5 {
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+section.mb-5::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  animation: slideGradient 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes slideGradient {
+  0% {background-position: 0%;}
+  100% {background-position: 200%;}
+}
+
+/* Imágenes fluidas con animación hover */
+.img-fluid {
+  border-radius: 0.75rem;
+  box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.img-fluid:hover,
+.img-fluid:focus {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.25);
+  outline: none;
+}
+
+/* Listas con efecto de borde y fondo dinámico */
+.list-group-item {
+  background-color: transparent;
+  border: none;
+  border-left: 4px solid transparent;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  color: #343a40;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  border-radius: 0.5rem;
+}
+
+.list-group-item:hover,
+.list-group-item:focus {
+  border-left-color: var(--primary-color);
+  background-color: #e9f0ff;
+  cursor: pointer;
+  color: var(--primary-hover);
+  box-shadow: 0 4px 10px var(--primary-shadow);
+  outline: none;
+  transform: translateX(5px);
+}
+
+/* Código preformateado */
+pre.bg-light {
+  background-color: #f0f4ff !important;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  color: var(--primary-color);
+  box-shadow: inset 0 0 15px rgba(13,110,253,0.15);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  transition: background-color var(--transition-fast);
+}
+
+/* Botones estilizados con sombras y transiciones suaves */
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 0.85rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 15px rgba(13,110,253,0.3);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast), transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-hover);
+  box-shadow: 0 8px 20px rgba(11,94,215,0.5);
+  transform: translateY(-3px);
+  outline: none;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 12px rgba(11,94,215,0.4);
+}
+
+/* Textos especiales */
+.text-muted,
+.fst-italic {
+  font-style: italic;
+  color: var(--text-muted) !important;
+  font-size: 0.95rem;
+}
+
+/* Iframe video con sombra y bordes redondeados */
+.ratio iframe {
+  border-radius: 0.75rem;
+  box-shadow: 0 1rem 2.5rem rgba(0,0,0,0.12);
+  border: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.ratio iframe:hover,
+.ratio iframe:focus {
+  box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.2);
+  outline: none;
+}
+
+/* Iconos con espaciado y color */
+.fab.fa-github {
+  margin-left: 0.6rem;
+  vertical-align: middle;
+  transition: color var(--transition-fast);
+  color: var(--primary-color);
+}
+
+.fab.fa-github:hover {
+  color: var(--primary-hover);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .container.py-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  h1.display-4 {
+    font-size: clamp(1.75rem, 6vw, 2.8rem);
+  }
+
+  p.lead {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container.py-5 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h1.display-4 {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+  }
+
+  p.lead {
+    font-size: 1rem;
+  }
+}
