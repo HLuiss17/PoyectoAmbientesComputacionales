@@ -1,0 +1,240 @@
+<app-navbar></app-navbar>
+<br><br><br>
+
+<section class="container py-5">
+  <div class="text-center mb-5">
+    <h1 class="display-4 fw-bold text-primary animate__animated animate__fadeInDown">Guía Profesional Completa de GitHub</h1>
+    <p class="lead text-secondary mx-auto" style="max-width: 720px;">
+      Esta guía exhaustiva está diseñada para que profesionales y equipos de desarrollo dominen GitHub, la plataforma líder en control de versiones, colaboración y despliegue de proyectos de software. Aquí descubrirás desde fundamentos esenciales hasta técnicas avanzadas para potenciar tu flujo de trabajo.
+    </p>
+    <img src="/Images/github/banner.jpg" class="img-fluid rounded shadow-lg my-4 animate__animated animate__zoomIn" alt="GitHub banner" loading="lazy" />
+    <hr class="w-25 mx-auto" />
+  </div>
+
+  <!-- ¿Qué es GitHub? -->
+  <section class="mb-5">
+    <h2 class="h4 fw-semibold text-dark border-start border-4 border-primary ps-3 mb-4">1. ¿Qué es GitHub?</h2>
+    <p class="text-muted fs-5">
+      GitHub es una plataforma en la nube que integra Git con herramientas colaborativas, ideal para almacenar código, gestionar versiones, y automatizar proyectos con trazabilidad total.
+    </p>
+    <img src="/Images/github/que es.jpg" class="img-fluid rounded shadow my-4" alt="Qué es GitHub" loading="lazy" />
+    <ul class="list-group list-group-flush fs-5">
+      <li class="list-group-item d-flex align-items-center gap-3">
+        <i class="fas fa-code-branch text-primary"></i> Sistema distribuido de control de versiones (Git)
+      </li>
+      <li class="list-group-item d-flex align-items-center gap-3">
+        <i class="fas fa-cloud-upload-alt text-primary"></i> Repositorios remotos para compartir proyectos
+      </li>
+      <li class="list-group-item d-flex align-items-center gap-3">
+        <i class="fas fa-users-cog text-primary"></i> Colaboración mediante ramas, pull requests e issues
+      </li>
+      <li class="list-group-item d-flex align-items-center gap-3">
+        <i class="fas fa-robot text-primary"></i> Automatización con GitHub Actions
+      </li>
+      <li class="list-group-item d-flex align-items-center gap-3">
+        <i class="fas fa-globe text-primary"></i> Hosting de sitios estáticos con GitHub Pages
+      </li>
+    </ul>
+  </section>
+
+  <!-- ¿Para qué sirve GitHub? -->
+  <section class="mb-5">
+    <h2 class="h4 fw-semibold text-dark border-start border-4 border-primary ps-3 mb-4">2. ¿Para qué sirve GitHub?</h2>
+    <div class="row align-items-center gy-4">
+      <div class="col-md-8 fs-5 text-muted">
+        <p>
+          GitHub centraliza la colaboración, permite gestión de errores, documentación, automatización de CI/CD y despliegue de proyectos.
+        </p>
+        <ul class="list-group list-group-flush fs-5">
+          <li class="list-group-item d-flex align-items-center gap-3">
+            <i class="fas fa-users text-primary"></i> Colaboración entre equipos multidisciplinarios
+          </li>
+          <li class="list-group-item d-flex align-items-center gap-3">
+            <i class="fas fa-code text-primary"></i> Control total de versiones y cambios
+          </li>
+          <li class="list-group-item d-flex align-items-center gap-3">
+            <i class="fas fa-clipboard-list text-primary"></i> Seguimiento con Issues y Proyectos
+          </li>
+          <li class="list-group-item d-flex align-items-center gap-3">
+            <i class="fas fa-cogs text-primary"></i> Automatización con pipelines personalizables
+          </li>
+          <li class="list-group-item d-flex align-items-center gap-3">
+            <i class="fas fa-cloud text-primary"></i> Hosting gratuito con GitHub Pages
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="/Images/github/para que sirve.jpg" class="img-fluid rounded shadow-sm" alt="Para qué sirve GitHub" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿Cómo se utiliza GitHub? -->
+  <section class="mb-5">
+    <h2 class="h4 fw-semibold text-dark border-start border-4 border-primary ps-3 mb-4">3. ¿Cómo se utiliza GitHub?</h2>
+    <div class="row gy-4">
+      <div class="col-md-6">
+        <img src="/Images/github/flujotrabajo.png" class="img-fluid rounded shadow mb-4" alt="Flujo de trabajo GitHub" loading="lazy" />
+      </div>
+      <div class="col-md-6 fs-5 text-muted">
+        <p>El flujo profesional incluye:</p>
+        <ol class="ps-3">
+          <li>Crear repositorio con <code>README.md</code> y <code>.gitignore</code></li>
+          <li>Clonar con <code>git clone &lt;url&gt;</code></li>
+          <li>Editar archivos localmente</li>
+          <li>Preparar cambios con <code>git add</code></li>
+          <li>Confirmar con <code>git commit -m "mensaje"</code></li>
+          <li>Enviar al remoto con <code>git push</code></li>
+          <li>Trabajar en ramas aisladas</li>
+          <li>Realizar pull requests para revisión</li>
+          <li>Actualizar local con <code>git pull</code></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Creación de Repositorio -->
+  <section class="mb-5">
+    <h2 class="h4 fw-semibold text-dark border-start border-4 border-primary ps-3 mb-4">4. Creación de Repositorio</h2>
+    <p class="fs-5 text-muted">
+      Al iniciar un proyecto, incluye:
+    </p>
+    <ul class="list-group list-group-flush fs-5">
+      <li class="list-group-item d-flex align-items-center gap-3">
+        <i class="fas fa-file-alt text-primary"></i> <code>README.md</code> con descripción y objetivos
+      </li>
+      <li class="list-group-item d-flex align-items-center gap-3">
+        <i class="fas fa-ban text-primary"></i> <code>.gitignore</code> para archivos temporales o sensibles
+      </li>
+      <li class="list-group-item d-flex align-items-center gap-3">
+        <i class="fas fa-balance-scale text-primary"></i> Licencia adecuada al proyecto
+      </li>
+    </ul>
+    <h6 class="fw-bold mt-4">Ejemplo en terminal:</h6>
+    <pre class="bg-light p-3 rounded shadow-sm"><code>
+git init
+echo "# MiProyecto" &gt; README.md
+git add .
+git commit -m "Inicial"
+git remote add origin https://github.com/usuario/mi-proyecto.git
+git push -u origin main
+    </code></pre>
+  </section>
+
+  <!-- README.md y .gitignore -->
+  <section class="mb-5">
+    <h2 class="h4 fw-semibold text-dark border-start border-4 border-primary ps-3 mb-4">5. README.md &amp; .gitignore</h2>
+    <div class="row gy-4 align-items-center">
+      <div class="col-md-6">
+        <img src="/Images/github/readme.png" class="img-fluid rounded shadow-sm" alt="Ejemplo README" loading="lazy" />
+      </div>
+      <div class="col-md-6 fs-5 text-muted">
+        <p>README.md debe incluir:</p>
+        <ul class="list-group list-group-flush fs-5">
+          <li class="list-group-item d-flex align-items-center gap-3">
+            <i class="fas fa-tag text-primary"></i> Nombre y descripción del proyecto
+          </li>
+          <li class="list-group-item d-flex align-items-center gap-3">
+            <i class="fas fa-download text-primary"></i> Requisitos e instalación
+          </li>
+          <li class="list-group-item d-flex align-items-center gap-3">
+            <i class="fas fa-image text-primary"></i> Ejemplos, capturas y enlaces
+          </li>
+          <li class="list-group-item d-flex align-items-center gap-3">
+            <i class="fas fa-user-friends text-primary"></i> Autores, licencia y contacto
+          </li>
+        </ul>
+        <p class="mt-3">.gitignore previene subir archivos no deseados:</p>
+        <pre class="bg-light p-3 rounded shadow-sm"><code>node_modules/
+.env
+.DS_Store
+dist/
+*.log
+        </code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub Pages -->
+  <section class="mb-5">
+    <h2 class="h4 fw-semibold text-dark border-start border-4 border-primary ps-3 mb-4">6. Publicación profesional con GitHub Pages</h2>
+    <div class="row align-items-center gy-4">
+      <div class="col-md-6 fs-5 text-muted">
+        <p><strong>GitHub Pages</strong> es una herramienta gratuita de GitHub que permite publicar sitios web estáticos directamente desde un repositorio. Es ideal para portafolios profesionales, documentación técnica, blogs, landing pages y presentaciones de proyectos.</p>
+        <p>Integrada al flujo de desarrollo con Git, elimina la necesidad de servidores adicionales y permite actualizaciones instantáneas con cada <code>push</code>.</p>
+        <h6 class="fw-bold mt-4 mb-3">Pasos detallados para publicar tu sitio:</h6>
+        <ol class="ps-3">
+          <li><strong>1.</strong> Crea un repositorio en GitHub, idealmente llamado <code>usuario.github.io</code> para una página principal.</li>
+          <li><strong>2.</strong> Añade un archivo <code>index.html</code> junto con recursos (CSS, imágenes, JS).</li>
+          <li><strong>3.</strong> Haz commits y sube tu sitio con <code>git push</code>.</li>
+          <li><strong>4.</strong> Ve a <strong>Settings &gt; Pages</strong> en el repositorio.</li>
+          <li><strong>5.</strong> En <strong>Source</strong>, selecciona la rama <code>main</code> y el directorio raíz <code>/ (root)</code>.</li>
+          <li><strong>6.</strong> Guarda los cambios y espera unos segundos para que se procese el sitio.</li>
+          <li><strong>7.</strong> Accede a tu sitio en: <br><code>https://usuario.github.io/repositorio</code></li>
+        </ol>
+        <p class="mt-3 fst-italic">GitHub Pages soporta dominios personalizados, HTTPS automático, Jekyll y temas prediseñados, facilitando una publicación profesional y segura.</p>
+        <h6 class="fw-bold mt-4 mb-3">Estructura mínima recomendada del proyecto:</h6>
+        <pre class="bg-light p-3 rounded shadow-sm"><code>
+📁 mi-sitio/
+├── index.html
+├── styles.css
+├── script.js
+├── /images/
+└── README.md
+        </code></pre>
+        <p class="fst-italic mt-2">Nota: Si usas carpetas con guion bajo (como <code>_includes</code>), agrega un archivo vacío <code>.nojekyll</code> para evitar errores en el procesamiento.</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="/Images/github/pages.png" class="img-fluid rounded shadow" alt="Ejemplo visual de GitHub Pages" loading="lazy" />
+        <p class="mt-3 text-muted fst-italic small">Visualización de la configuración en GitHub Pages</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos recomendados -->
+  <section class="mb-5">
+    <h2 class="h4 fw-semibold text-dark border-start border-4 border-primary ps-3 mb-4">7. Videos recomendados para profundizar</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9 rounded shadow">
+          <iframe src="https://www.youtube.com/embed/44ziZ12rJwU" title="Introducción a Git y GitHub - FreeCodeCamp" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="mt-2 text-center text-muted fst-italic">Introducción a Git y GitHub - FreeCodeCamp</p>
+      </div>
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9 rounded shadow">
+          <iframe src="https://www.youtube.com/embed/8IdBAysf-U4" title="Tutorial GitHub Pages - CódigoFacilito" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="mt-2 text-center text-muted fst-italic">Cómo publicar con GitHub Pages - CódigoFacilito</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recursos adicionales -->
+  <section class="mb-5">
+    <h2 class="h4 fw-semibold text-dark border-start border-4 border-primary ps-3 mb-4">8. Recursos adicionales para profundizar</h2>
+    <div class="row align-items-center gy-4">
+      <div class="col-md-8">
+        <ul class="list-group list-group-flush fs-5">
+          <li class="list-group-item"><a href="https://docs.github.com/" target="_blank" rel="noopener" class="text-decoration-none">Documentación oficial de GitHub</a></li>
+          <li class="list-group-item"><a href="https://skills.github.com/" target="_blank" rel="noopener" class="text-decoration-none">GitHub Skills</a></li>
+          <li class="list-group-item"><a href="https://pages.github.com/" target="_blank" rel="noopener" class="text-decoration-none">Guía de GitHub Pages</a></li>
+          <li class="list-group-item"><a href="https://www.youtube.com/github" target="_blank" rel="noopener" class="text-decoration-none">Canal oficial de YouTube</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="/Images/github/recursos.png" class="img-fluid rounded shadow-sm" alt="Recursos GitHub" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Botón final -->
+  <div class="text-center my-5">
+    <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-primary btn-lg px-4">
+      Visitar GitHub <i class="fab fa-github ms-2"></i>
+    </a>
+  </div>
+</section>
+
+<br><br><br>
+<app-footer></app-footer>
