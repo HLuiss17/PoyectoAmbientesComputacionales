@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { Footer } from '../footer/footer';
+import { Navbar } from '../navbar/navbar';
 
 @Component({
   selector: 'app-documentos',
-  imports: [],
+  imports: [Navbar, Footer],
   templateUrl: './documentos.html',
   styleUrl: './documentos.css'
 })
