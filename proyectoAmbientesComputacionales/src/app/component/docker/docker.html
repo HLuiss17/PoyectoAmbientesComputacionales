@@ -1,0 +1,100 @@
+<app-navbar></app-navbar><br><br><br><br>
+<div class="container main-content">
+    <h1>Guía Interactiva: Despliegue de Aplicaciones Angular con Docker</h1>
+
+    <div class="section">
+        <h2 id="requisitos-previos">1. Requisitos Previos </h2>
+        <div id="content-1" class="content">
+            <p><strong>Sistema operativo:</strong> Windows 10 64-bit (Pro, Enterprise o Education) o Windows 11</p>
+            <p>Virtualización habilitada en la BIOS</p>
+            <img src="./Images/Docker/BIOS.png" alt="Icono de la BIOS" />
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 id="wsl-habilitado">2. Habilitar WSL (Windows Subsystem for Linux) </h2>
+        <div id="content-2" class="content">
+            <p>Actualiza WSL manualmente desde PowerShell (como Administrador)</p>
+            <p><b>Ejecuta este comando para actualizar el componente WSL al más reciente:</b></p>
+            <pre
+                id="cmd-wsl-update">wsl --update<button class="copy-btn" data-clipboard-target="cmd-wsl-update"><i class="bi bi-files"></i> Copiar</button></pre>
+
+            <p><b>Reinicia WSL</b><br />
+                Después de la actualización, reinicia WSL con este comando:</p>
+            <pre
+                id="cmd-wsl-shutdown">wsl --shutdown<button class="copy-btn" data-clipboard-target="cmd-wsl-shutdown"><i class="bi bi-files"></i> Copiar</button></pre>
+
+            <p>Luego ejecuta:</p>
+            <pre
+                id="cmd-wsl-version">wsl --version<button class="copy-btn" data-clipboard-target="cmd-wsl-version"><i class="bi bi-files"></i> Copiar</button></pre>
+
+            <p>Debes ver algo como:</p>
+            <img src="./Images/Docker/wsl.png" alt="Logo de WSL" />
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 id="descargar-docker">3. Descargar Docker Desktop
+        </h2>
+        <div id="content-3" class="content">
+            <p>Ve a la página oficial:</p>
+            <p><a href="https://www.docker.com/products/docker-desktop" target="_blank"
+                    rel="noopener noreferrer">Descargar
+                    Docker Desktop</a></p>
+            <p>Haz clic en "Download for Windows".</p>
+            <img src="./Images/Docker/DockerDescargar.png" alt="Captura de pantalla de descarga de Docker" />
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 id="construir-angular-produccion">4. Construye tu proyecto Angular en modo producción </h2>
+        <div id="content-4" class="content">
+            <p>Esto crea la carpeta que vamos a copiar al contenedor Docker.</p>
+            <pre
+                id="cmd-ng-build">ng build --configuration production<button class="copy-btn" data-clipboard-target="cmd-ng-build"><i class="bi bi-files"></i> Copiar</button></pre>
+            <img src="./Images/Docker/ConfigurarProduction.png" alt="Configuración de producción de Angular" />
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 id="crear-dockerfile">5. Crea el archivo Dockerfile en la raíz del proyecto </h2>
+        <div id="content-5" class="content">
+            <p>Crear el Dockerfile en la raíz del proyecto<br />
+                Este archivo no tiene extensión y se llama exactamente así: <code>Dockerfile</code></p>
+            <img src="./Images/Docker/DockerFile.png" alt="Icono de Dockerfile" />
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 id="construir-imagen-docker">6. Construye la imagen Docker </h2>
+        <div id="content-6" class="content">
+            <p>Abre la terminal y ubícate en la raíz del proyecto, donde está el Dockerfile</p>
+            <p>Ejecuta:</p>
+            <pre
+                id="cmd-docker-build">docker build -t proyectoambientescomputacionales .<button class="copy-btn" data-clipboard-target="cmd-docker-build"><i class="bi bi-files"></i> Copiar</button></pre>
+            <img src="./Images/Docker/build.png" alt="Comando docker build" />
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 id="ejecutar-contenedor">7. Ejecuta el contenedor
+        </h2>
+        <div id="content-7" class="content">
+            <p>Ejecuta este comando para iniciar el contenedor:</p>
+            <pre
+                id="cmd-docker-run">docker run -d -p 4200:80 proyectoambientescomputacionales<button class="copy-btn" data-clipboard-target="cmd-docker-run"><i class="bi bi-files"></i> Copiar</button></pre>
+            <img src="./Images/Docker/Run.png" alt="Comando docker run" />
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 id="acceder-app">8. Acceder a tu aplicación </h2>
+        <div id="content-8" class="content">
+            <p class="app-link">¡Tu aplicación está lista en: <a href="http://localhost:4200" target="_blank"
+                    rel="noopener noreferrer">http://localhost:4200</a>!</p>
+        </div>
+    </div>
+
+</div>
+
+<app-footer></app-footer>

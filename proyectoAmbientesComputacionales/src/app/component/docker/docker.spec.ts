@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Git } from './git';
+import { Docker } from './docker';
 
-describe('Git', () => {
-  let component: Git;
-  let fixture: ComponentFixture<Git>;
+describe('Docker', () => {
+  let component: Docker;
+  let fixture: ComponentFixture<Docker>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Git]
-    }) 
+      imports: [Docker]
+    })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Git);
+    fixture = TestBed.createComponent(Docker);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

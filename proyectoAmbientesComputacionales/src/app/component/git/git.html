@@ -1,111 +1,152 @@
-<app-navbar></app-navbar><br>
-<br><br><br>
+<app-navbar></app-navbar>
+<br><br><br><br>
 <section id="git-info" class="container py-5">
-  <h2 class="mb-4"><i class="bi bi-git"></i> ¿Qué es Git y para qué sirve?</h2>
-  <p>
-    <strong>Git</strong> es un sistema de control de versiones distribuido que permite gestionar el historial de cambios en los archivos de un proyecto. Es una herramienta fundamental en el desarrollo de software porque ayuda a llevar un control organizado y seguro del código fuente.
-  </p>
-  <p>Entre sus principales usos se destacan:</p>
-  <ul>
-    <li>Guardar versiones del proyecto mediante <em>commits</em>.</li>
-    <li>Colaborar con otros desarrolladores sin sobrescribir el trabajo de los demás.</li>
-    <li>Comparar versiones anteriores y restaurarlas si es necesario.</li>
-    <li>Trabajar en distintas funcionalidades en paralelo mediante <em>ramas</em> (<em>branches</em>).</li>
-  </ul>
-  <p>Git se utiliza frecuentemente junto con plataformas como <strong>GitHub</strong>, donde se pueden alojar los repositorios de forma remota y colaborar en línea.</p>
+  <div class="card shadow-sm mb-5 custom-section-card">
+    <div class="card-body">
+      <h2 class="card-title text-center mb-4"> ¿Qué es Git y para qué sirve?</h2>
+      <p class="lead">
+        <strong>Git</strong> es un sistema de control de versiones distribuido que permite gestionar el historial de
+        cambios en los archivos de un proyecto. Es una herramienta fundamental en el desarrollo de software porque ayuda
+        a llevar un control organizado y seguro del código fuente.
+      </p>
+      <p class="card-text mb-3">Entre sus principales usos se destacan:</p>
+      <div class="row">
+        <div class="col-md-6 mb-2">
+          <div class="feature-item p-3 border rounded">
+            <p class="mb-0"> Guardar versiones del proyecto mediante <em>commits</em>.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="feature-item p-3 border rounded">
+            <p class="mb-0"> Colaborar con otros desarrolladores sin sobrescribir el trabajo de los demás.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="feature-item p-3 border rounded">
+            <p class="mb-0"> Comparar versiones anteriores y restaurarlas si es necesario.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="feature-item p-3 border rounded">
+            <p class="mb-0"> Trabajar en distintas funcionalidades en paralelo mediante <em>ramas</em>
+              (<em>branches</em>).</p>
+          </div>
+        </div>
+      </div>
+      <p class="mt-4">Git se utiliza frecuentemente junto con plataformas como <strong>GitHub</strong>, donde se pueden
+        alojar los repositorios de forma remota y colaborar en línea.</p>
+    </div>
+  </div>
 
-  <h2 class="mt-5"><i class="bi bi-terminal"></i> ¿Qué es Git Bash?</h2>
-  <p>
-    <strong>Git Bash</strong> es una terminal para sistemas Windows que permite usar comandos de Git y de navegación estilo Unix. Es muy útil para trabajar cómodamente con Git desde la línea de comandos.
-  </p>
-  <ul>
-    <li><code>cd</code> Cambiar de directorio.</li>
-    <li><code>ls</code> Listar archivos.</li>
-    <li><code>mkdir</code> Crear carpetas.</li>
-    <li><code>git clone</code> Clonar un repositorio.</li>
-    <li><code>git add</code>, <code>git commit</code>, <code>git push</code> Guardar y subir cambios.</li>
-  </ul>
+  <div class="card shadow-sm mb-5 custom-section-card">
+    <div class="card-body">
+      <h2 class="card-title text-center mb-4"> ¿Qué es Git Bash?</h2>
+      <p class="lead">
+        <strong>Git Bash</strong> es una terminal para sistemas Windows que permite usar comandos de Git y de navegación
+        estilo Unix. Es muy útil para trabajar cómodamente con Git desde la línea de comandos.
+      </p>
+      <div class="command-grid mt-4">
+        <div class="command-item"><code>cd &lt;directorio&gt;</code> <span class="description">Cambiar de
+            directorio.</span></div>
+        <div class="command-item"><code>ls</code> <span class="description">Listar archivos y carpetas.</span></div>
+        <div class="command-item"><code>mkdir &lt;nombre&gt;</code> <span class="description">Crear nuevas
+            carpetas.</span></div>
+        <div class="command-item"><code>git clone &lt;url&gt;</code> <span class="description">Clonar un repositorio
+            remoto.</span></div>
+        <div class="command-item"><code>git add</code> <span class="description">Añadir archivos al área de
+            preparación.</span></div>
+        <div class="command-item"><code>git commit</code> <span class="description">Guardar cambios en el
+            historial.</span></div>
+        <div class="command-item"><code>git push</code> <span class="description">Subir cambios al repositorio
+            remoto.</span></div>
+      </div>
+    </div>
+  </div>
 
-  <h2 class="mt-5"><i class="bi bi-code-slash"></i> Comandos básicos de Git</h2>
-  <div class="table-responsive">
-    <table class="table table-bordered table-striped align-middle mt-3">
-      <thead class="table-dark">
-        <tr>
-          <th>Comando</th>
-          <th>Descripción</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>git init</code></td>
-          <td>Inicializa un nuevo repositorio Git en el directorio actual.</td>
-        </tr>
-        <tr>
-          <td><code>git clone &lt;url&gt;</code></td>
-          <td>Clona un repositorio remoto (de GitHub, por ejemplo).</td>
-        </tr>
-        <tr>
-          <td><code>git status</code></td>
-          <td>Muestra el estado actual de los archivos en el repositorio.</td>
-        </tr>
-        <tr>
-          <td><code>git add .</code></td>
-          <td>Añade todos los archivos modificados al área de preparación (staging).</td>
-        </tr>
-        <tr>
-          <td><code>git commit -m "mensaje"</code></td>
-          <td>Registra los cambios con un mensaje descriptivo.</td>
-        </tr>
-        <tr>
-          <td><code>git remote add origin &lt;url&gt;</code></td>
-          <td>Conecta el repositorio local con un repositorio remoto (GitHub).</td>
-        </tr>
-        <tr>
-          <td><code>git push -u origin main</code></td>
-          <td>Envía los cambios locales a la rama principal del repositorio remoto.</td>
-        </tr>
-        <tr>
-          <td><code>git checkout -b nombre-rama</code></td>
-          <td>Crea y cambia a una nueva rama.</td>
-        </tr>
-        <tr>
-          <td><code>git branch</code></td>
-          <td>Lista las ramas locales existentes.</td>
-        </tr>
-        <tr>
-          <td><code>git checkout nombre-rama</code></td>
-          <td>Cambia de rama.</td>
-        </tr>
-        <tr>
-          <td><code>git pull origin main</code></td>
-          <td>Descarga y fusiona los cambios del repositorio remoto.</td>
-        </tr>
-        <tr>
-          <td><code>git push origin nombre-rama</code></td>
-          <td>Sube los cambios a la rama especificada en el repositorio remoto.</td>
-        </tr>
-        <tr>
-          <td><code>git stash</code></td>
-          <td>Guarda temporalmente cambios no confirmados.</td>
-        </tr>
-        <tr>
-          <td><code>git stash pop</code></td>
-          <td>Recupera los cambios guardados con stash.</td>
-        </tr>
-        <tr>
-          <td><code>git log</code></td>
-          <td>Muestra el historial de commits.</td>
-        </tr>
-        <tr>
-          <td><code>git reset HEAD~1</code></td>
-          <td>Elimina el último commit (mantiene los cambios en el área de trabajo).</td>
-        </tr>
-        <tr>
-          <td><code>git reset --hard HEAD~1</code></td>
-          <td>Elimina el último commit y borra los cambios del área de trabajo.</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="card shadow-sm mb-5 custom-section-card">
+    <div class="card-body">
+      <h2 class="card-title text-center mb-4"> Comandos básicos de Git</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped align-middle mt-3 custom-git-table">
+          <thead class="table-dark">
+            <tr>
+              <th>Comando</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>git init</code></td>
+              <td>Inicializa un nuevo repositorio Git en el directorio actual.</td>
+            </tr>
+            <tr>
+              <td><code>git clone &lt;url&gt;</code></td>
+              <td>Clona un repositorio remoto (de GitHub, por ejemplo).</td>
+            </tr>
+            <tr>
+              <td><code>git status</code></td>
+              <td>Muestra el estado actual de los archivos en el repositorio.</td>
+            </tr>
+            <tr>
+              <td><code>git add .</code></td>
+              <td>Añade todos los archivos modificados al área de preparación (staging).</td>
+            </tr>
+            <tr>
+              <td><code>git commit -m "mensaje"</code></td>
+              <td>Registra los cambios con un mensaje descriptivo.</td>
+            </tr>
+            <tr>
+              <td><code>git remote add origin &lt;url&gt;</code></td>
+              <td>Conecta el repositorio local con un repositorio remoto (GitHub).</td>
+            </tr>
+            <tr>
+              <td><code>git push -u origin main</code></td>
+              <td>Envía los cambios locales a la rama principal del repositorio remoto.</td>
+            </tr>
+            <tr>
+              <td><code>git checkout -b nombre-rama</code></td>
+              <td>Crea y cambia a una nueva rama.</td>
+            </tr>
+            <tr>
+              <td><code>git branch</code></td>
+              <td>Lista las ramas locales existentes.</td>
+            </tr>
+            <tr>
+              <td><code>git checkout nombre-rama</code></td>
+              <td>Cambia de rama.</td>
+            </tr>
+            <tr>
+              <td><code>git pull origin main</code></td>
+              <td>Descarga y fusiona los cambios del repositorio remoto.</td>
+            </tr>
+            <tr>
+              <td><code>git push origin nombre-rama</code></td>
+              <td>Sube los cambios a la rama especificada en el repositorio remoto.</td>
+            </tr>
+            <tr>
+              <td><code>git stash</code></td>
+              <td>Guarda temporalmente cambios no confirmados.</td>
+            </tr>
+            <tr>
+              <td><code>git stash pop</code></td>
+              <td>Recupera los cambios guardados con stash.</td>
+            </tr>
+            <tr>
+              <td><code>git log</code></td>
+              <td>Muestra el historial de commits.</td>
+            </tr>
+            <tr>
+              <td><code>git reset HEAD~1</code></td>
+              <td>Elimina el último commit (mantiene los cambios en el área de trabajo).</td>
+            </tr>
+            <tr>
+              <td><code>git reset --hard HEAD~1</code></td>
+              <td>Elimina el último commit y borra los cambios del área de trabajo.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </section>
 <br><br><br>

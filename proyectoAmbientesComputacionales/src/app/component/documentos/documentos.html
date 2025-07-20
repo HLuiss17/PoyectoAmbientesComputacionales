@@ -1,136 +1,211 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Guía: Crear y Clonar Repositorio GitHub</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            padding: 30px;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        code {
-            background-color: #eee;
-            padding: 2px 4px;
-            border-radius: 4px;
-            font-family: Consolas, monospace;
-        }
-        pre {
-            background: #272822;
-            color: #0741e2;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-        img {
-            display: block;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-        }
-    </style>
-</head>
-<body>
+<app-navbar></app-navbar>
+<br><br><br><br>
+<div class="container main-content">
+    <h1>Domina GitHub: Guía Esencial de Repositorios y Versiones</h1>
 
-    <app-navbar></app-navbar><br>
-    <br><br><br>
-    <h1>Pasos para Crear y Clonar el Repositorio</h1>
+    <div class="section">
+        <h2 id="crear-repositorio">Paso 1: Crear un repositorio en GitHub </h2>
+        <div id="content-1" class="content">
+            <p class="lead">Sigue estos pasos claros para configurar tu nuevo espacio de código en la nube:</p>
 
-    <h2>Paso 1: Crear un repositorio en GitHub</h2>
-    <ul>
-        <li>Inicia sesión en <a href="https://github.com/" target="_blank">GitHub</a>.</li>
-        <li>Haz clic en “New repository” o “Nuevo repositorio”.</li>
-        <li>Completa los campos:
+            <div class="card mb-3 custom-step-card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-person-check-fill text-primary me-2"></i> 1. Inicia sesión
+                    </h5>
+                    <p class="card-text">Accede a tu cuenta de <a href="https://github.com/" target="_blank">GitHub</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mb-3 custom-step-card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-plus-square-fill text-success me-2"></i> 2. Crea un nuevo
+                        repositorio</h5>
+                    <p class="card-text">Haz clic en el botón <strong>“New repository”</strong> o <strong>“Nuevo
+                            repositorio”</strong>, generalmente ubicado en la esquina superior derecha.</p>
+                </div>
+            </div>
+
+            <div class="card mb-3 custom-step-card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-pencil-square text-info me-2"></i> 3. Configura los detalles
+                        del repositorio</h5>
+                    <p class="card-text">Rellena la siguiente información esencial para tu nuevo repositorio:</p>
+
+                    <div class="card-group-fields">
+                        <div class="card custom-field-card mb-2">
+                            <div class="card-body p-2">
+                                <strong><i class="bi bi-tag-fill me-1"></i> Nombre:</strong>
+                                <code>PoyectoAmbientesComputacionales</code>
+                                <p class="text-muted small mb-0">Un nombre claro para tu proyecto.</p>
+                            </div>
+                        </div>
+                        <div class="card custom-field-card mb-2">
+                            <div class="card-body p-2">
+                                <strong><i class="bi bi-card-text me-1"></i> Descripción:</strong> "Aplicación web,
+                                ejecutada en un contenedor Docker."
+                                <p class="text-muted small mb-0">Describe brevemente de qué trata tu proyecto.</p>
+                            </div>
+                        </div>
+                        <div class="card custom-field-card mb-2">
+                            <div class="card-body p-2">
+                                <strong><i class="bi bi-eye-fill me-1"></i> Visibilidad:</strong> Pública
+                                <p class="text-muted small mb-0">Permite que sea visible para todos.</p>
+                            </div>
+                        </div>
+                        <div class="card custom-field-card mb-2">
+                            <div class="card-body p-2">
+                                <strong><i class="bi bi-gear-fill me-1"></i> Opciones iniciales:</strong>
+                                <ul class="list-unstyled mt-2">
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Agregar archivo README
+                                        (documentación básica)</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Agregar
+                                        <code>.gitignore</code> (plantilla <strong>Node</strong>) (ignora archivos
+                                        innecesarios)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3 custom-step-card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-box-arrow-in-down-right text-primary me-2"></i> 4. Finaliza
+                        la creación</h5>
+                    <p class="card-text">Haz clic en el botón <strong>Crear repositorio</strong> para completar el
+                        proceso.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 id="clonar-repositorio"> Paso 2: Clonar el repositorio en tu máquina </h2>
+        <div id="content-2" class="content">
             <ul>
-                <li><strong>Nombre:</strong> <code>PoyectoAmbientesComputacionales</code></li>
-                <li><strong>Descripción:</strong> "Aplicación web, ejecutada en un contenedor Docker."</li>
-                <li><strong>Visibilidad:</strong> Pública</li>
-                <li>Marca las opciones:
-                    <ul>
-                        <li>Agregar archivo README</li>
-                        <li>Agregar <code>.gitignore</code> (plantilla <strong>Node</strong>)</li>
-                    </ul>
+                <li>Copia la URL del repositorio:
+                    <pre
+                        id="url-repo">https://github.com/HLuiss17/PoyectoAmbientesComputacionales.git<button class="copy-btn" data-clipboard-target="url-repo"><i class="bi bi-files"></i> Copiar</button></pre>
+                </li>
+                <li>Abre tu terminal o Git Bash.</li>
+                <li>Ve a la carpeta donde guardarás el proyecto:
+                    <pre
+                        id="cmd-cd-ruta"><code>cd ruta/donde/quieres/guardar</code><button class="copy-btn" data-clipboard-target="cmd-cd-ruta"><i class="bi bi-files"></i> Copiar</button></pre>
+                </li>
+                <li>Clona el repositorio:
+                    <pre
+                        id="cmd-git-clone"><code>git clone https://github.com/HLuiss17/PoyectoAmbientesComputacionales.git</code><button class="copy-btn" data-clipboard-target="cmd-git-clone"><i class="bi bi-files"></i> Copiar</button></pre>
+                </li>
+                <li>Entra a la carpeta:
+                    <pre
+                        id="cmd-cd-project"><code>cd PoyectoAmbientesComputacionales</code><button class="copy-btn" data-clipboard-target="cmd-cd-project"><i class="bi bi-files"></i> Copiar</button></pre>
+                </li>
+                <li>Verifica los archivos:
+                    <pre
+                        id="cmd-ls"><code>ls</code><button class="copy-btn" data-clipboard-target="cmd-ls"><i class="bi bi-files"></i> Copiar</button></pre>
                 </li>
             </ul>
-        </li>
-        <li>Haz clic en <strong>Crear repositorio</strong>.</li>
-    </ul>
-    <img src="Images/git/crear nuevo github.png" alt="Captura crear repositorio" width="600">
-    <img src="Images/git/Creación github.png" alt="Captura crear repositorio" width="600">
+            <img src="Images/git/clonación repositorio.png" alt="Captura clonación de repositorio" width="600">
+            <img src="Images/git/Explorador.png" alt="Captura explorador de archivos" width="600">
+        </div>
+    </div>
 
-    <h2>🔹 Paso 2: Clonar el repositorio en tu máquina</h2>
-    <ul>
-        <li>Copia la URL del repositorio:
-            <pre>https://github.com/HLuiss17/PoyectoAmbientesComputacionales.git</pre>
-        </li>
-        <li>Abre tu terminal o Git Bash.</li>
-        <li>Ve a la carpeta donde guardarás el proyecto:
-            <pre><code>cd ruta/donde/quieres/guardar</code></pre>
-        </li>
-        <li>Clona el repositorio:
-            <pre><code>git clone https://github.com/HLuiss17/PoyectoAmbientesComputacionales.git</code></pre>
-        </li>
-        <li>Entra a la carpeta:
-            <pre><code>cd PoyectoAmbientesComputacionales</code></pre>
-        </li>
-        <li>Verifica los archivos:
-            <pre><code>ls</code></pre>
-        </li>
-    </ul>
-    <img src="Images/git/clonación repositorio.png" alt="Captura clonación de repositorio" width="600">
-    <img src="Images/git/Explorador.png" alt="Captura clonación de repositorio" width="600">
+    <h1 class="mid-title">Subir Primer Avance a GitHub</h1>
 
+    <div class="section">
+        <h2 id="inicializar-git"> Paso 3: Inicializar Git</h2>
+        <div id="content-3" class="content">
+            <pre
+                id="cmd-git-init"><code>git init</code><button class="copy-btn" data-clipboard-target="cmd-git-init"><i class="bi bi-files"></i> Copiar</button></pre>
+            <img src="Images/git/inicializar.png" alt="Captura git init" width="600">
+        </div>
+    </div>
 
-    <h1>✅ Subir Primer Avance a GitHub</h1>
+    <div class="section">
+        <h2 id="verificar-remoto">Paso 4: Verificar conexión al repositorio remoto </h2>
+        <div id="content-4" class="content">
+            <pre
+                id="cmd-git-remote"><code>git remote -v</code><button class="copy-btn" data-clipboard-target="cmd-git-remote"><i class="bi bi-files"></i> Copiar</button></pre>
+            <img src="Images/git/git-remote.png" alt="Captura git remote" width="600">
+            <p>Si no aparece nada, conectar manualmente:</p>
+            <pre
+                id="cmd-git-remote-add"><code>git remote add origin https://github.com/HLuiss17/PoyectoAmbientesComputacionales.git</code><button class="copy-btn" data-clipboard-target="cmd-git-remote-add"><i class="bi bi-files"></i> Copiar</button></pre>
+        </div>
+    </div>
 
-    <h2>🔹 Paso 3: Inicializar Git</h2>
-    <pre><code>git init</code></pre>
-    <img src="Images/git/inicializar.png" alt="Captura git init" width="600">
+    <div class="section">
+        <h2 id="verificar-estado"> Paso 5: Verificar el estado </h2>
+        <div id="content-5" class="content">
+            <pre
+                id="cmd-git-status"><code>git status</code><button class="copy-btn" data-clipboard-target="cmd-git-status"><i class="bi bi-files"></i> Copiar</button></pre>
+            <img src="Images/git/git-status.png" alt="Captura git status" width="600">
+        </div>
+    </div>
 
-    <h2>🔹 Paso 4: Verificar conexión al repositorio remoto</h2>
-    <pre><code>git remote -v</code></pre>
-    <img src="Images/git/git-remote.png" alt="Captura git remote" width="600">
-    <p>Si no aparece nada, conectar manualmente:</p>
-    <pre><code>git remote add origin https://github.com/HLuiss17/PoyectoAmbientesComputacionales.git</code></pre>
+    <div class="section">
+        <h2 id="crear-rama"> Paso 6: Crear nueva rama
+        </h2>
+        <div id="content-6" class="content">
+            <pre
+                id="cmd-git-branch"><code>git branch devdesarrolladores</code><button class="copy-btn" data-clipboard-target="cmd-git-branch"><i class="bi bi-files"></i> Copiar</button></pre>
+            <pre
+                id="cmd-git-checkout"><code>git checkout devdesarrolladores</code><button class="copy-btn" data-clipboard-target="cmd-git-checkout"><i class="bi bi-files"></i> Copiar</button></pre>
+            <img src="Images/git/Git-branch.png" alt="Captura git branch" width="600">
+        </div>
+    </div>
 
-    <h2>🔹 Paso 5: Verificar el estado</h2>
-    <pre><code>git status</code></pre>
-    <img src="Images/git/git-status.png" alt="Captura git status" width="600">
+    <div class="section">
+        <h2 id="agregar-archivos"> Paso 7: Agregar archivos </h2>
+        <div id="content-7" class="content">
+            <pre
+                id="cmd-git-add"><code>git add .</code><button class="copy-btn" data-clipboard-target="cmd-git-add"><i class="bi bi-files"></i> Copiar</button></pre>
+            <img src="Images/git/git-add.png" alt="Captura git add" width="600">
+        </div>
+    </div>
 
-    <h2>🔹 Paso 6: Crear nueva rama</h2>
-    <pre><code>git branch devdesarrolladores</code></pre>
-    <pre><code>git checkout devdesarrolladores</code></pre>
-    <img src="Images/git/Git-branch.png" alt="Captura git branch" width="600">
+    <div class="section">
+        <h2 id="realizar-commit"> Paso 8: Realizar el commit </h2>
+        <div id="content-8" class="content">
+            <pre
+                id="cmd-git-commit"><code>git commit -m "Primer avance del proyecto"</code><button class="copy-btn" data-clipboard-target="cmd-git-commit"><i class="bi bi-files"></i> Copiar</button></pre>
+            <img src="Images/git/git-commit.png" alt="Captura git commit" width="600">
+            <img src="Images/git/git.png" alt="Captura git commit" width="600">
+        </div>
+    </div>
 
-    <h2>🔹 Paso 7: Agregar archivos</h2>
-    <pre><code>git add .</code></pre>
-    <img src="Images/git/git-add.png" alt="Captura git add" width="600">
+    <div class="section">
+        <h2 id="subir-cambios"> Paso 9: Subir los cambios a GitHub </h2>
+        <div id="content-9" class="content">
+            <p>Si estás en la rama <code>devdesarrolladores</code>:</p>
+            <pre
+                id="cmd-git-push-dev"><code>git push -u origin devdesarrolladores</code><button class="copy-btn" data-clipboard-target="cmd-git-push-dev"><i class="bi bi-files"></i> Copiar</button></pre>
+            <p>Si estás en la rama <code>main</code>:</p>
+            <pre
+                id="cmd-git-push-main"><code>git push -u origin main</code><button class="copy-btn" data-clipboard-target="cmd-git-push-main"><i class="bi bi-files"></i> Copiar</button></pre>
+            <img src="Images/git/git-push.png" alt="Captura git push" width="600">
+        </div>
+    </div>
 
-    <h2>🔹 Paso 8: Realizar el commit</h2>
-    <pre><code>git commit -m "Primer avance del proyecto"</code></pre>
-    <img src="Images/git/git-commit.png" alt="Captura git commit" width="600">
-    <img src="Images/git/git.png" alt="Captura git commit" width="600">
+    <div class="section">
+        <h2 id="historial-commits"> Paso 10: Ver historial de commits </h2>
+        <div id="content-10" class="content">
+            <pre
+                id="cmd-git-log"><code>git log</code><button class="copy-btn" data-clipboard-target="cmd-git-log"><i class="bi bi-files"></i> Copiar</button></pre>
+            <img src="Images/git/git-log.png" alt="Captura git log" width="600">
+        </div>
+    </div>
 
-    <h2>🔹 Paso 9: Subir los cambios a GitHub</h2>
-    <p>Si estás en la rama <code>devdesarrolladores</code>:</p>
-    <pre><code>git push -u origin devdesarrolladores</code></pre>
-    <p>Si estás en la rama <code>main</code>:</p>
-    <pre><code>git push -u origin main</code></pre>
-    <img src="Images/git/git-push.png" alt="Captura git push" width="600">
+    <div class="section">
+        <h2 id="obtener-cambios"> Paso 11: Obtener todos los cambios</h2>
+        <div id="content-11" class="content">
+            <pre
+                id="cmd-git-pull"><code>git pull</code><button class="copy-btn" data-clipboard-target="cmd-git-pull"><i class="bi bi-files"></i> Copiar</button></pre>
+            <img src="Images/git/git.pull.png" alt="Captura git pull" width="600">
+        </div>
+    </div>
 
-    <h2>🔹 Paso 10: Ver historial de commits</h2>
-    <pre><code>git log</code></pre>
-    <img src="Images/git/git-log.png" alt="Captura git log" width="600">
+</div>
 
-    <h2>🔹 Paso 11: Obtener todos los cambios </h2>
-    <pre><code>git pull</code></pre>
-    <img src="Images/git/git.pull.png" alt="Captura git pull" width="600">
-
-</body>
-</html>
-<br><br><br>
 <app-footer></app-footer>
