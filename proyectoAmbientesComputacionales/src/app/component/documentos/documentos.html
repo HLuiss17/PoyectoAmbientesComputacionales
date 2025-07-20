@@ -21,7 +21,7 @@
         }
         pre {
             background: #272822;
-            color: #f8f8f2;
+            color: #0741e2;
             padding: 10px;
             border-radius: 5px;
             overflow-x: auto;
@@ -36,9 +36,11 @@
 </head>
 <body>
 
-    <h1>✅ Pasos para Crear y Clonar el Repositorio</h1>
+    <app-navbar></app-navbar><br>
+    <br><br><br>
+    <h1>Pasos para Crear y Clonar el Repositorio</h1>
 
-    <h2>🔹 Paso 1: Crear un repositorio en GitHub</h2>
+    <h2>Paso 1: Crear un repositorio en GitHub</h2>
     <ul>
         <li>Inicia sesión en <a href="https://github.com/" target="_blank">GitHub</a>.</li>
         <li>Haz clic en “New repository” o “Nuevo repositorio”.</li>
@@ -49,16 +51,16 @@
                 <li><strong>Visibilidad:</strong> Pública</li>
                 <li>Marca las opciones:
                     <ul>
-                        <li>✅ Agregar archivo README</li>
-                        <li>✅ Agregar <code>.gitignore</code> (plantilla <strong>Node</strong>)</li>
+                        <li>Agregar archivo README</li>
+                        <li>Agregar <code>.gitignore</code> (plantilla <strong>Node</strong>)</li>
                     </ul>
                 </li>
             </ul>
         </li>
         <li>Haz clic en <strong>Crear repositorio</strong>.</li>
     </ul>
-    <p><strong>📷 Captura sugerida:</strong> Crear nuevo repositorio</p>
-    <img src="imagenes/crear-repositorio.png" alt="Captura crear repositorio" width="600">
+    <img src="Images/git/crear nuevo github.png" alt="Captura crear repositorio" width="600">
+    <img src="Images/git/Creación github.png" alt="Captura crear repositorio" width="600">
 
     <h2>🔹 Paso 2: Clonar el repositorio en tu máquina</h2>
     <ul>
@@ -79,63 +81,56 @@
             <pre><code>ls</code></pre>
         </li>
     </ul>
-    <p><strong>📷 Captura sugerida:</strong> Repositorio clonado en terminal</p>
-    <img src="imagenes/git-clone.png" alt="Captura clonación de repositorio" width="600">
+    <img src="Images/git/clonación repositorio.png" alt="Captura clonación de repositorio" width="600">
+    <img src="Images/git/Explorador.png" alt="Captura clonación de repositorio" width="600">
+
 
     <h1>✅ Subir Primer Avance a GitHub</h1>
 
     <h2>🔹 Paso 3: Inicializar Git</h2>
     <pre><code>git init</code></pre>
-    <img src="imagenes/git-init.png" alt="Captura git init" width="600">
+    <img src="Images/git/inicializar.png" alt="Captura git init" width="600">
 
     <h2>🔹 Paso 4: Verificar conexión al repositorio remoto</h2>
     <pre><code>git remote -v</code></pre>
-    <img src="imagenes/git-remote.png" alt="Captura git remote" width="600">
+    <img src="Images/git/git-remote.png" alt="Captura git remote" width="600">
     <p>Si no aparece nada, conectar manualmente:</p>
     <pre><code>git remote add origin https://github.com/HLuiss17/PoyectoAmbientesComputacionales.git</code></pre>
 
     <h2>🔹 Paso 5: Verificar el estado</h2>
     <pre><code>git status</code></pre>
-    <img src="imagenes/git-status.png" alt="Captura git status" width="600">
+    <img src="Images/git/git-status.png" alt="Captura git status" width="600">
 
     <h2>🔹 Paso 6: Crear nueva rama</h2>
     <pre><code>git branch devdesarrolladores</code></pre>
     <pre><code>git checkout devdesarrolladores</code></pre>
-    <img src="imagenes/git-branch.png" alt="Captura git branch" width="600">
+    <img src="Images/git/Git-branch.png" alt="Captura git branch" width="600">
 
     <h2>🔹 Paso 7: Agregar archivos</h2>
     <pre><code>git add .</code></pre>
-    <img src="imagenes/git-add.png" alt="Captura git add" width="600">
+    <img src="Images/git/git-add.png" alt="Captura git add" width="600">
 
     <h2>🔹 Paso 8: Realizar el commit</h2>
     <pre><code>git commit -m "Primer avance del proyecto"</code></pre>
-    <img src="imagenes/git-commit.png" alt="Captura git commit" width="600">
+    <img src="Images/git/git-commit.png" alt="Captura git commit" width="600">
+    <img src="Images/git/git.png" alt="Captura git commit" width="600">
 
     <h2>🔹 Paso 9: Subir los cambios a GitHub</h2>
     <p>Si estás en la rama <code>devdesarrolladores</code>:</p>
     <pre><code>git push -u origin devdesarrolladores</code></pre>
     <p>Si estás en la rama <code>main</code>:</p>
     <pre><code>git push -u origin main</code></pre>
-    <img src="imagenes/git-push.png" alt="Captura git push" width="600">
+    <img src="Images/git/git-push.png" alt="Captura git push" width="600">
 
     <h2>🔹 Paso 10: Ver historial de commits</h2>
     <pre><code>git log</code></pre>
-    <img src="imagenes/git-log.png" alt="Captura git log" width="600">
+    <img src="Images/git/git-log.png" alt="Captura git log" width="600">
 
-    <h2>🔹 Paso 11: Ver ramas existentes</h2>
-    <pre><code>git branch</code></pre>
-    <img src="imagenes/git-branch2.png" alt="Captura git branch 2" width="600">
-
-    <h2>📸 Recomendación Final</h2>
-    <ul>
-        <li>Toma capturas en cada paso importante:
-            <ul>
-                <li>Creación del repositorio en GitHub</li>
-                <li>Clonación local del proyecto</li>
-                <li>Ejecutar comandos como <code>git status</code>, <code>git add</code>, <code>git push</code></li>
-            </ul>
-        </li>
-    </ul>
+    <h2>🔹 Paso 11: Obtener todos los cambios </h2>
+    <pre><code>git pull</code></pre>
+    <img src="Images/git/git.pull.png" alt="Captura git pull" width="600">
 
 </body>
 </html>
+<br><br><br>
+<app-footer></app-footer>
