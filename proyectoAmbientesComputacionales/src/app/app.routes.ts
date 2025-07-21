@@ -12,8 +12,8 @@ export const routes: Routes = [
     {path: 'navbar', component: Navbar},
     {path: 'footer', component: Footer},
     {path: 'inicio', component: Inicio},
-    {path: 'gits', component: Git}, 
-    {path: 'githubs', component: Github},
+    {path: 'gits', component: Git},
+    {path: 'github', component: Github},
     {path: 'documentos', component: Documentos},
     {path: 'docker', component: Docker}
 ];

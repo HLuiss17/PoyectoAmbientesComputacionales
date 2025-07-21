@@ -148,7 +148,7 @@ pre.bg-light {
 
 /* Botones estilizados con sombras y transiciones suaves */
 .btn-primary {
-  background-color: var(--primary-color);
+  background-color: #0d6efd;
   border: none;
   padding: 0.85rem 2rem;
   font-size: 1.125rem;
